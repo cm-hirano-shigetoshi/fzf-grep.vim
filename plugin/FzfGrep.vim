@@ -7,8 +7,7 @@ let g:load_FzfGrep = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-"nnoremap <silent> <Plug>fzf-grep :<C-u>call FzfGrep#run("")<CR>
-nnoremap <silent> <C-j> :<C-u>call FzfGrep#run("")<CR>
+nnoremap <silent> <Plug>fzf-grep :<C-u>call FzfGrep#run("")<CR>
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
