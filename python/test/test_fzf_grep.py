@@ -74,11 +74,11 @@ def test_option_to_shell_string(key, value, expected):
     [
         (
             "/absolute/path/",
-            "--reverse --header '/absolute/path/' --preview 'bat --color always {}' --preview-window down",
+            "--reverse --header '/absolute/path/' --delimiter ':' --preview 'bat --color always --highlight-line {2} {1}' --preview-window 'down' --preview-window '+{2}'",
         ),
         (
             "/",
-            "--reverse --header '/' --preview 'bat --color always {}' --preview-window down",
+            "--reverse --header '/' --delimiter ':' --preview 'bat --color always --highlight-line {2} {1}' --preview-window 'down' --preview-window '+{2}'",
         ),
     ],
 )

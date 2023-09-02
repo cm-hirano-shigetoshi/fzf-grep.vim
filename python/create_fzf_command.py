@@ -40,7 +40,7 @@ def get_fzf_options_core(d, query, server_port):
 
 
 def get_fzf_options_view(abs_dir):
-    return f"--reverse --header '{abs_dir}' --preview 'bat --color always {{}}' --preview-window down"
+    return f"--reverse --header '{abs_dir}' --delimiter ':' --preview 'bat --color always --highlight-line {{2}} {{1}}' --preview-window 'down' --preview-window '+{{2}}'"
 
 
 def get_absdir_view(path, home_dir=os.environ["HOME"]):
