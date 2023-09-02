@@ -8,6 +8,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 nnoremap <silent> <Plug>fzf-grep :<C-u>call FzfGrep#run("")<CR>
+nnoremap <silent> <Plug>fzf-grep-current-word :<C-u>call FzfGrep#run(expand('<cword>'))<CR>
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
