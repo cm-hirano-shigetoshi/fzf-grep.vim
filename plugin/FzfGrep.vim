@@ -7,8 +7,8 @@ let g:load_FzfGrep = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-nnoremap <silent> <Plug>fzf-grep :<C-u>call FzfGrep#run("")<CR>
-nnoremap <silent> <Plug>fzf-grep-current-word :<C-u>call FzfGrep#run(expand('<cword>'))<CR>
+nnoremap <silent> <Plug>fzf-grep-run :lua require('FzfGrep').run(vim.fn.expand(""))<cr>
+nnoremap <silent> <Plug>fzf-grep-current-word :lua require('FzfGrep').run(vim.fn.expand('<cfile>'))<cr>
 
 let &cpo = s:save_cpo
 unlet s:save_cpo

@@ -155,11 +155,12 @@ def run_as_thread(origin_path):
     return port
 
 
-def run(origin_path, server_port):
+def run(origin_path, server_port, fzf_port):
     search_origins.append(origin_path)
     update_file_filter("default")
 
     HTTPServer(("", int(server_port)), RequestHandler).serve_forever()
+    set_fzf_port(fzf_port)
 
 
 if __name__ == "__main__":
